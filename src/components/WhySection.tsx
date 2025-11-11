@@ -33,8 +33,8 @@ const WhySection = () => {
               className="flex flex-col items-center text-center p-8 bg-background rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 animate-fade-in-up group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
-                <feature.icon className="h-10 w-10 text-primary group-hover:scale-110 transition-transform" />
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center mb-5 group-hover:from-whatsapp/20 group-hover:to-whatsapp/10 transition-all duration-300 group-hover:scale-110">
+                <feature.icon className="h-10 w-10 text-whatsapp group-hover:scale-110 transition-transform" />
               </div>
               <h3 className="font-semibold text-lg">{feature.title}</h3>
             </div>

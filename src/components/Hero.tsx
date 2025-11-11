@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="flex justify-center animate-scale-in" style={{ animationDelay: "0.4s" }}>
           <Button
             size="lg"
-            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-lg px-10 py-7 rounded-full shadow-2xl hover:shadow-[0_0_40px_rgba(142,198,103,0.6)] transition-all duration-500 hover:scale-110 animate-float"
+            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-lg px-10 py-7 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(142,198,103,0.5)] transition-all duration-300 hover:scale-105"
             asChild
           >
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">

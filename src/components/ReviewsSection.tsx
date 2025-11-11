@@ -42,13 +42,13 @@ const ReviewsSection = () => {
               className="bg-card p-8 rounded-xl shadow-lg border border-border hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
             >
-              <div className="flex items-center gap-1 mb-3">
+              <div className="flex items-center justify-center gap-1 mb-3">
                 {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <p className="text-muted-foreground mb-4">{review.text}</p>
-              <p className="font-semibold">{review.name}</p>
+              <p className="text-muted-foreground mb-4 text-center">{review.text}</p>
+              <p className="font-semibold text-center">{review.name}</p>
             </div>
           ))}
         </div>

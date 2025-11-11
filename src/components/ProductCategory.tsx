@@ -30,14 +30,14 @@ const ProductCategory = ({ title, description, image, details }: ProductCategory
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
       </div>
       
-      <div className="container mx-auto px-4 py-8 md:py-12">
+      <div className="container mx-auto px-4 py-8 md:py-12 text-center">
         <h3 className="text-3xl md:text-4xl font-bold mb-3 animate-fade-in">{title}</h3>
-        <p className="text-muted-foreground text-lg mb-8 animate-fade-in" style={{ animationDelay: "0.1s" }}>{description}</p>
+        <p className="text-muted-foreground text-lg mb-8 animate-fade-in max-w-2xl mx-auto" style={{ animationDelay: "0.1s" }}>{description}</p>
         
         <div className="flex justify-center mb-8 animate-scale-in" style={{ animationDelay: "0.2s" }}>
           <Button
             size="lg"
-            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground px-8 py-6 rounded-full shadow-xl hover:shadow-[0_0_30px_rgba(142,198,103,0.5)] transition-all duration-500 hover:scale-105"
+            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground px-8 py-6 rounded-full shadow-xl hover:shadow-[0_0_30px_rgba(142,198,103,0.5)] transition-all duration-300 hover:scale-105"
             asChild
           >
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
@@ -47,19 +47,19 @@ const ProductCategory = ({ title, description, image, details }: ProductCategory
           </Button>
         </div>
 
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
           <AccordionItem value="details" className="border rounded-lg px-4">
-            <AccordionTrigger className="text-left hover:no-underline">
+            <AccordionTrigger className="hover:no-underline justify-center">
               <span className="flex items-center gap-2 font-semibold">
                 Ver detalhes do aparelho
                 <ChevronDown className="h-4 w-4" />
               </span>
             </AccordionTrigger>
             <AccordionContent>
-              <ul className="space-y-2 pt-2">
+              <ul className="space-y-2 pt-2 text-left">
                 {details.map((detail, index) => (
                   <li key={index} className="text-muted-foreground flex items-start">
-                    <span className="text-primary mr-2">•</span>
+                    <span className="text-whatsapp mr-2 font-bold">•</span>
                     {detail}
                   </li>
                 ))}

@@ -12,16 +12,16 @@ const Footer = () => {
                 href="https://wa.me/5531981068052"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-foreground transition-colors"
+                className="flex items-center gap-2 hover:text-whatsapp transition-colors"
               >
-                <Phone className="h-4 w-4" />
+                <Phone className="h-4 w-4 text-whatsapp" />
                 (31) 98106-8052
               </a>
               <a
                 href="mailto:gphonebh@gmail.com"
                 className="flex items-center gap-2 hover:text-foreground transition-colors"
               >
-                <Mail className="h-4 w-4" />
+                <Mail className="h-4 w-4 text-blue-500" />
                 gphonebh@gmail.com
               </a>
             </div>
@@ -35,7 +35,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="flex items-start gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+              <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-red-500" />
               <span>Rua Ilacir Pereira Lima, 195 S604<br />Belo Horizonte/MG</span>
             </a>
           </div>
@@ -54,16 +54,16 @@ const Footer = () => {
                 href="https://instagram.com/gphonebh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-foreground transition-colors"
+                className="flex items-center gap-2 hover:text-pink-500 transition-colors"
               >
-                <Instagram className="h-4 w-4" />
+                <Instagram className="h-4 w-4 text-pink-500" />
                 @gphonebh
               </a>
               <a
                 href="#"
-                className="flex items-center gap-2 hover:text-foreground transition-colors"
+                className="flex items-center gap-2 hover:text-blue-600 transition-colors"
               >
-                <Facebook className="h-4 w-4" />
+                <Facebook className="h-4 w-4 text-blue-600" />
                 Facebook
               </a>
             </div>

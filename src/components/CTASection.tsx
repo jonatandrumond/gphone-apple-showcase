@@ -18,7 +18,7 @@ const CTASection = () => {
         <div className="flex justify-center mb-6 animate-scale-in" style={{ animationDelay: "0.2s" }}>
           <Button
             size="lg"
-            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-xl px-12 py-8 rounded-full shadow-2xl hover:shadow-[0_0_50px_rgba(142,198,103,0.7)] transition-all duration-500 hover:scale-110 animate-float"
+            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-xl px-12 py-8 rounded-full shadow-2xl hover:shadow-[0_0_40px_rgba(142,198,103,0.6)] transition-all duration-300 hover:scale-105"
             asChild
           >
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
