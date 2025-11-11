@@ -1,12 +1,89 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import ProductCategory from "@/components/ProductCategory";
+import AboutSection from "@/components/AboutSection";
+import WhySection from "@/components/WhySection";
+import ReviewsSection from "@/components/ReviewsSection";
+import MapSection from "@/components/MapSection";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
+
+import iphoneImage from "@/assets/iphone-category.jpg";
+import macbookImage from "@/assets/macbook-category.jpg";
+import ipadImage from "@/assets/ipad-category.jpg";
+import watchImage from "@/assets/watch-category.jpg";
 
 const Index = () => {
+  const iphoneDetails = [
+    "Modelos disponíveis: iPhone 11, 12, 13, 14, 15",
+    "Armazenamento: 64GB, 128GB, 256GB",
+    "Cores: preto, branco, azul, rosa",
+    "Estado: novo / seminovo",
+    "Garantia: 3 meses",
+    "Nota fiscal disponível",
+  ];
+
+  const macbookDetails = [
+    "Modelos: MacBook Air, MacBook Pro",
+    "Processadores: M1, M2, Intel",
+    "Armazenamento: 256GB / 512GB / 1TB",
+    "Estado: novo / seminovo",
+    "Garantia: 6 meses",
+    "Nota fiscal disponível",
+  ];
+
+  const ipadDetails = [
+    "Modelos: iPad 9ª, 10ª geração, Air e Pro",
+    "Armazenamento: 64GB / 256GB",
+    "Conectividade: Wi-Fi / Wi-Fi + Celular",
+    "Cores: prata, cinza-espacial",
+    "Garantia: 3 meses",
+    "Acessórios disponíveis: Apple Pencil",
+  ];
+
+  const watchDetails = [
+    "Séries: SE, Series 7, 8, 9 e Ultra",
+    "Tamanhos: 40mm / 44mm / 49mm",
+    "Cores e pulseiras variadas",
+    "Conectividade: GPS / Cellular",
+    "Garantia: 3 meses",
+    "Estado: novo / seminovo",
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Header />
+      <Hero />
+      <ProductCategory
+        title="Celular iOS"
+        description="Modelos novos e seminovos com garantia e procedência"
+        image={iphoneImage}
+        details={iphoneDetails}
+      />
+      <ProductCategory
+        title="MacBook"
+        description="Performance, elegância e potência para o seu dia a dia"
+        image={macbookImage}
+        details={macbookDetails}
+      />
+      <ProductCategory
+        title="iPad"
+        description="Produtividade e criatividade em qualquer lugar"
+        image={ipadImage}
+        details={ipadDetails}
+      />
+      <ProductCategory
+        title="Apple Watch"
+        description="Estilo e tecnologia no seu pulso"
+        image={watchImage}
+        details={watchDetails}
+      />
+      <AboutSection />
+      <WhySection />
+      <ReviewsSection />
+      <MapSection />
+      <CTASection />
+      <Footer />
     </div>
   );
 };
