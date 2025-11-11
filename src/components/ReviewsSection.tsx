@@ -23,8 +23,8 @@ const ReviewsSection = () => {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center gap-3 mb-12">
-          <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none">
+        <div className="flex items-center justify-center gap-3 mb-16 animate-fade-in-up">
+          <svg className="h-10 w-10 animate-scale-in" viewBox="0 0 24 24" fill="none">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
             <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
             <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
@@ -35,11 +35,12 @@ const ReviewsSection = () => {
           </h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-card p-6 rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow"
+              className="bg-card p-8 rounded-xl shadow-lg border border-border hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
             >
               <div className="flex items-center gap-1 mb-3">
                 {[...Array(review.rating)].map((_, i) => (
@@ -52,8 +53,13 @@ const ReviewsSection = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <Button variant="outline" size="lg" asChild>
+        <div className="flex justify-center animate-scale-in" style={{ animationDelay: "0.5s" }}>
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="rounded-full px-8 py-6 text-lg hover:scale-105 transition-all duration-300 shadow-md hover:shadow-xl"
+            asChild
+          >
             <a
               href="https://www.google.com/search?q=gphone+bh"
               target="_blank"

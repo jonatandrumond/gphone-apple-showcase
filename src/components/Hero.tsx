@@ -17,23 +17,24 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <h2 className="text-4xl md:text-6xl font-bold mb-4 text-balance animate-fade-in">
+        <h2 className="text-4xl md:text-6xl font-bold mb-6 text-balance animate-fade-in-up drop-shadow-lg">
           Apple com atendimento especializado em BH
         </h2>
-        <p className="text-lg md:text-xl mb-8 text-balance max-w-2xl mx-auto opacity-90 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+        <p className="text-lg md:text-2xl mb-10 text-balance max-w-2xl mx-auto opacity-95 animate-fade-in-up drop-shadow-md" style={{ animationDelay: "0.2s" }}>
           Encontre o iPhone, MacBook, iPad ou Apple Watch ideal para você
         </p>
-        <Button
-          size="lg"
-          className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
-          style={{ animationDelay: "0.2s" }}
-          asChild
-        >
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Falar no WhatsApp
-          </a>
-        </Button>
+        <div className="flex justify-center animate-scale-in" style={{ animationDelay: "0.4s" }}>
+          <Button
+            size="lg"
+            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-lg px-10 py-7 rounded-full shadow-2xl hover:shadow-[0_0_40px_rgba(142,198,103,0.6)] transition-all duration-500 hover:scale-110 animate-float"
+            asChild
+          >
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="mr-2 h-6 w-6" />
+              Falar no WhatsApp
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   );

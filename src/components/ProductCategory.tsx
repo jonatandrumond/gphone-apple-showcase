@@ -31,17 +31,17 @@ const ProductCategory = ({ title, description, image, details }: ProductCategory
       </div>
       
       <div className="container mx-auto px-4 py-8 md:py-12">
-        <h3 className="text-3xl md:text-4xl font-bold mb-3">{title}</h3>
-        <p className="text-muted-foreground text-lg mb-6">{description}</p>
+        <h3 className="text-3xl md:text-4xl font-bold mb-3 animate-fade-in">{title}</h3>
+        <p className="text-muted-foreground text-lg mb-8 animate-fade-in" style={{ animationDelay: "0.1s" }}>{description}</p>
         
-        <div className="flex flex-col sm:flex-row gap-3 mb-6">
+        <div className="flex justify-center mb-8 animate-scale-in" style={{ animationDelay: "0.2s" }}>
           <Button
             size="lg"
-            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground flex-1 sm:flex-initial"
+            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground px-8 py-6 rounded-full shadow-xl hover:shadow-[0_0_30px_rgba(142,198,103,0.5)] transition-all duration-500 hover:scale-105"
             asChild
           >
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="mr-2 h-4 w-4" />
+              <MessageCircle className="mr-2 h-5 w-5" />
               Entrar em contato
             </a>
           </Button>
