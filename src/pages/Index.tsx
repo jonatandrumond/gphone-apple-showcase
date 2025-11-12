@@ -53,36 +53,50 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <Hero />
-      <ProductCategory
-        title="Celular iOS"
-        description="Modelos novos e seminovos com garantia e procedência"
-        image={iphoneImage}
-        details={iphoneDetails}
-      />
-      <ProductCategory
-        title="MacBook"
-        description="Performance, elegância e potência para o seu dia a dia"
-        image={macbookImage}
-        details={macbookDetails}
-      />
-      <ProductCategory
-        title="iPad"
-        description="Produtividade e criatividade em qualquer lugar"
-        image={ipadImage}
-        details={ipadDetails}
-      />
-      <ProductCategory
-        title="Apple Watch"
-        description="Estilo e tecnologia no seu pulso"
-        image={watchImage}
-        details={watchDetails}
-      />
-      <AboutSection />
-      <WhySection />
-      <ReviewsSection />
-      <MapSection />
-      <CTASection />
+      <section id="inicio">
+        <Hero />
+      </section>
+      <section id="produtos">
+        <ProductCategory
+          title="Celular iOS"
+          description="Modelos novos e seminovos com garantia e procedência"
+          image={iphoneImage}
+          details={iphoneDetails}
+        />
+        <ProductCategory
+          title="MacBook"
+          description="Performance, elegância e potência para o seu dia a dia"
+          image={macbookImage}
+          details={macbookDetails}
+        />
+        <ProductCategory
+          title="iPad"
+          description="Produtividade e criatividade em qualquer lugar"
+          image={ipadImage}
+          details={ipadDetails}
+        />
+        <ProductCategory
+          title="Apple Watch"
+          description="Estilo e tecnologia no seu pulso"
+          image={watchImage}
+          details={watchDetails}
+        />
+      </section>
+      <section id="sobre">
+        <AboutSection />
+      </section>
+      <section id="por-que">
+        <WhySection />
+      </section>
+      <section id="avaliacoes">
+        <ReviewsSection />
+      </section>
+      <section id="localizacao">
+        <MapSection />
+      </section>
+      <section id="contato">
+        <CTASection />
+      </section>
       <Footer />
     </div>
   );
