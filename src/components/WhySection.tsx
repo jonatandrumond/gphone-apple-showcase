@@ -1,42 +1,42 @@
-import { Star, Shield, Zap, CreditCard } from "lucide-react";
+import { Award, UserCog, Clock, BadgeCheck } from "lucide-react";
 
 const features = [
   {
-    icon: Star,
-    title: "Atendimento personalizado",
+    icon: Award,
+    title: "Qualidade em 1ª lugar",
   },
   {
-    icon: Shield,
-    title: "Garantia e procedência",
+    icon: UserCog,
+    title: "Atendimento direto com técnico",
   },
   {
-    icon: Zap,
-    title: "Entrega rápida e segura",
+    icon: Clock,
+    title: "Avaliação na hora, agende seu horário!",
   },
   {
-    icon: CreditCard,
-    title: "Facilidade de pagamento",
+    icon: BadgeCheck,
+    title: "Trabalhamos com Peças originais",
   },
 ];
 
 const WhySection = () => {
   return (
-    <section className="py-12 sm:py-16 md:py-24 bg-muted">
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 animate-fade-in-up px-2">
-          Por que a GPhone?
+    <section className="py-8 sm:py-12 md:py-16 lg:py-24 bg-muted">
+      <div className="container mx-auto px-3 sm:px-4">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16 animate-fade-in-up px-2">
+          Diferenciais
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center p-4 sm:p-6 md:p-8 bg-background rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 animate-fade-in-up group"
+              className="flex flex-col items-center text-center p-3 sm:p-4 md:p-6 lg:p-8 bg-background rounded-lg sm:rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 animate-fade-in-up group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center mb-3 sm:mb-4 md:mb-5 group-hover:from-whatsapp/20 group-hover:to-whatsapp/10 transition-all duration-300 group-hover:scale-110">
-                <feature.icon className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 text-whatsapp group-hover:scale-110 transition-transform" />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center mb-2 sm:mb-3 md:mb-4 lg:mb-5 group-hover:from-whatsapp/20 group-hover:to-whatsapp/10 transition-all duration-300 group-hover:scale-110">
+                <feature.icon className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 lg:h-10 lg:w-10 text-whatsapp group-hover:scale-110 transition-transform" />
               </div>
-              <h3 className="font-semibold text-sm sm:text-base md:text-lg">{feature.title}</h3>
+              <h3 className="font-semibold text-xs sm:text-sm md:text-base lg:text-lg leading-tight px-1">{feature.title}</h3>
             </div>
           ))}
         </div>

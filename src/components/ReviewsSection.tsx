@@ -30,21 +30,21 @@ const depoimentos = [
 
 const ReviewsSection = () => {
   return (
-    <section className="py-12 sm:py-16 md:py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 md:mb-16 animate-fade-in-up">
-          <svg className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 animate-scale-in" viewBox="0 0 24 24" fill="none">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-24 bg-background">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 md:mb-12 lg:mb-16 animate-fade-in-up">
+          <svg className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 animate-scale-in" viewBox="0 0 24 24" fill="none">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
             <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
             <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
             <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
           </svg>
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
             O que nossos clientes dizem
           </h2>
         </div>
         
-        <div className="mb-10 max-w-5xl mx-auto">
+        <div className="mb-6 sm:mb-8 md:mb-10 max-w-5xl mx-auto">
           <Carousel
             opts={{
               align: "start",
@@ -52,31 +52,31 @@ const ReviewsSection = () => {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-1 sm:-ml-2 md:-ml-4">
               {depoimentos.map((depoimento, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <div className="bg-card rounded-xl shadow-lg border border-border overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-105">
+                <CarouselItem key={index} className="pl-1 sm:pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                  <div className="p-1 sm:p-2">
+                    <div className="bg-card rounded-lg sm:rounded-xl shadow-lg border border-border overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-105">
                       <img
                         src={depoimento}
                         alt={`Depoimento ${index + 1}`}
-                        className="w-full h-auto object-contain rounded-lg"
+                        className="w-full h-auto object-contain rounded-md sm:rounded-lg"
                       />
                     </div>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 md:left-4 bg-white/80 hover:bg-white" />
-            <CarouselNext className="right-2 md:right-4 bg-white/80 hover:bg-white" />
+            <CarouselPrevious className="left-1 sm:left-2 md:left-4 bg-white/80 hover:bg-white h-8 w-8 sm:h-10 sm:w-10" />
+            <CarouselNext className="right-1 sm:right-2 md:right-4 bg-white/80 hover:bg-white h-8 w-8 sm:h-10 sm:w-10" />
           </Carousel>
         </div>
 
-        <div className="flex justify-center animate-scale-in px-4" style={{ animationDelay: "0.5s" }}>
+        <div className="flex justify-center animate-scale-in px-3 sm:px-4" style={{ animationDelay: "0.5s" }}>
           <Button 
             variant="outline" 
             size="lg" 
-            className="rounded-full px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg hover:scale-105 transition-all duration-300 shadow-md hover:shadow-xl w-full sm:w-auto"
+            className="rounded-full px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-5 lg:py-6 text-xs sm:text-sm md:text-base lg:text-lg hover:scale-105 transition-all duration-300 shadow-md hover:shadow-xl w-full sm:w-auto max-w-xs sm:max-w-none"
             asChild
           >
             <a

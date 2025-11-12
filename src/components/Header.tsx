@@ -31,7 +31,8 @@ const Header = () => {
     e.preventDefault();
     const element = document.getElementById(targetId);
     if (element) {
-      const headerOffset = 100;
+      // Offset responsivo baseado no tamanho do header
+      const headerOffset = window.innerWidth < 640 ? 80 : 120;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -46,7 +47,7 @@ const Header = () => {
     { label: "Início", id: "inicio" },
     { label: "Produtos", id: "produtos" },
     { label: "Sobre", id: "sobre" },
-    { label: "Por quê", id: "por-que" },
+    { label: "Diferenciais", id: "por-que" },
     { label: "Avaliações", id: "avaliacoes" },
     { label: "Localização", id: "localizacao" },
     { label: "Contato", id: "contato" },
@@ -57,28 +58,28 @@ const Header = () => {
       className={cn(
         "fixed left-0 right-0 z-50 bg-black/95 text-white transition-all duration-500 backdrop-blur-sm",
         isScrolled && "shadow-xl bg-black/98",
-        isVisible ? "top-0" : "-top-24"
+        isVisible ? "top-0" : "-top-32"
       )}
     >
-      <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
+      <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-5 md:py-6">
         <div className="flex items-center justify-center relative">
           {/* Logo */}
           <div className="absolute left-2 sm:left-4 lg:left-8">
             <img 
               src={logo} 
               alt="GPhone Logo" 
-              className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
             />
           </div>
 
           {/* Navigation Menu - Centralized */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6 lg:gap-8">
             {navItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
                 onClick={(e) => handleNavClick(e, item.id)}
-                className="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 relative group"
+                className="text-base lg:text-lg font-medium text-gray-300 hover:text-white transition-colors duration-200 relative group py-2"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
@@ -108,8 +109,8 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <nav className="lg:hidden mt-4 pb-4 border-t border-gray-800 pt-4">
-            <div className="flex flex-col gap-4 items-center">
+          <nav className="lg:hidden mt-3 sm:mt-4 pb-3 sm:pb-4 border-t border-gray-800 pt-3 sm:pt-4">
+            <div className="flex flex-col gap-3 sm:gap-4 items-center">
               {navItems.map((item) => (
                 <a
                   key={item.id}
@@ -118,7 +119,7 @@ const Header = () => {
                     handleNavClick(e, item.id);
                     setIsMobileMenuOpen(false);
                   }}
-                  className="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                  className="text-sm sm:text-base font-medium text-gray-300 hover:text-white transition-colors duration-200 py-1.5 sm:py-2 w-full text-center"
                 >
                   {item.label}
                 </a>
