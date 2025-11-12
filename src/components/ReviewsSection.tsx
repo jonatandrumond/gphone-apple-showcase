@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -5,7 +6,9 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 // Importar todas as imagens de depoimentos
 import depoimento1 from "@/assets/depoimentos/WhatsApp Image 2025-11-11 at 21.59.43.jpeg";
@@ -16,6 +19,26 @@ import depoimento5 from "@/assets/depoimentos/WhatsApp Image 2025-11-11 at 21.59
 import depoimento6 from "@/assets/depoimentos/WhatsApp Image 2025-11-11 at 21.59.44 (2).jpeg";
 import depoimento7 from "@/assets/depoimentos/WhatsApp Image 2025-11-11 at 21.59.45.jpeg";
 import depoimento8 from "@/assets/depoimentos/WhatsApp Image 2025-11-11 at 21.59.45 (1).jpeg";
+
+// Componente individual para cada depoimento
+interface DepoimentoItemProps {
+  image: string;
+  index: number;
+}
+
+const DepoimentoItem = ({ image, index }: DepoimentoItemProps) => {
+  return (
+    <div className="p-1 sm:p-2">
+      <div className="bg-card rounded-lg sm:rounded-xl shadow-lg border border-border overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-105">
+        <img
+          src={image}
+          alt={`Depoimento ${index + 1}`}
+          className="w-full h-auto object-contain rounded-md sm:rounded-lg"
+        />
+      </div>
+    </div>
+  );
+};
 
 const depoimentos = [
   depoimento1,
@@ -29,6 +52,21 @@ const depoimentos = [
 ];
 
 const ReviewsSection = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return (
     <section className="py-8 sm:py-12 md:py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-3 sm:px-4">
@@ -46,24 +84,24 @@ const ReviewsSection = () => {
         
         <div className="mb-6 sm:mb-8 md:mb-10 max-w-5xl mx-auto">
           <Carousel
+            setApi={setApi}
             opts={{
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: true,
+              }),
+            ]}
             className="w-full"
           >
             <CarouselContent className="-ml-1 sm:-ml-2 md:-ml-4">
               {depoimentos.map((depoimento, index) => (
                 <CarouselItem key={index} className="pl-1 sm:pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <div className="p-1 sm:p-2">
-                    <div className="bg-card rounded-lg sm:rounded-xl shadow-lg border border-border overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-105">
-                      <img
-                        src={depoimento}
-                        alt={`Depoimento ${index + 1}`}
-                        className="w-full h-auto object-contain rounded-md sm:rounded-lg"
-                      />
-                    </div>
-                  </div>
+                  <DepoimentoItem image={depoimento} index={index + 1} />
                 </CarouselItem>
               ))}
             </CarouselContent>
