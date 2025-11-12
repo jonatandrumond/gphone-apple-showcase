@@ -36,7 +36,7 @@ const Header = () => {
     const element = document.getElementById(targetId);
     if (element) {
       // Offset responsivo baseado no tamanho do header
-      const headerOffset = window.innerWidth < 640 ? 120 : 120;
+      const headerOffset = window.innerWidth < 640 ? 200 : 200;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -64,14 +64,14 @@ const Header = () => {
         isVisible ? "top-0" : "-top-full"
       )}
     >
-      <div className="container mx-auto px-3 sm:px-4 py-7 sm:py-6 md:py-7 lg:py-6">
+      <div className="container mx-auto px-3 sm:px-4 py-12 sm:py-7 md:py-8 lg:py-12">
         <div className="flex items-center justify-center relative">
           {/* Logo */}
           <div className="absolute left-2 sm:left-4 lg:left-8">
             <img 
               src={logo} 
               alt="GPhone Logo" 
-              className="h-14 sm:h-14 md:h-16 lg:h-16 w-auto object-contain"
+              className="h-20 sm:h-20 md:h-24 lg:h-32 w-auto object-contain"
             />
           </div>
 
