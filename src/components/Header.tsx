@@ -14,9 +14,13 @@ const Header = () => {
       
       setIsScrolled(currentScrollY > 20);
       
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Esconde a navbar quando rola para baixo
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
         setIsVisible(false);
-      } else {
+      }
+      
+      // Só mostra a navbar quando chegar ao topo da página
+      if (currentScrollY <= 50) {
         setIsVisible(true);
       }
       
@@ -32,7 +36,7 @@ const Header = () => {
     const element = document.getElementById(targetId);
     if (element) {
       // Offset responsivo baseado no tamanho do header
-      const headerOffset = window.innerWidth < 640 ? 80 : 120;
+      const headerOffset = window.innerWidth < 640 ? 120 : 120;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -46,7 +50,6 @@ const Header = () => {
   const navItems = [
     { label: "Início", id: "inicio" },
     { label: "Produtos", id: "produtos" },
-    { label: "Sobre", id: "sobre" },
     { label: "Diferenciais", id: "por-que" },
     { label: "Avaliações", id: "avaliacoes" },
     { label: "Localização", id: "localizacao" },
@@ -58,17 +61,17 @@ const Header = () => {
       className={cn(
         "fixed left-0 right-0 z-50 bg-black/95 text-white transition-all duration-500 backdrop-blur-sm",
         isScrolled && "shadow-xl bg-black/98",
-        isVisible ? "top-0" : "-top-32"
+        isVisible ? "top-0" : "-top-full"
       )}
     >
-      <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-5 md:py-6">
+      <div className="container mx-auto px-3 sm:px-4 py-7 sm:py-6 md:py-7 lg:py-6">
         <div className="flex items-center justify-center relative">
           {/* Logo */}
           <div className="absolute left-2 sm:left-4 lg:left-8">
             <img 
               src={logo} 
               alt="GPhone Logo" 
-              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+              className="h-14 sm:h-14 md:h-16 lg:h-16 w-auto object-contain"
             />
           </div>
 

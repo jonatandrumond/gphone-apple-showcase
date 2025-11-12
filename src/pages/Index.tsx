@@ -1,12 +1,12 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCategory from "@/components/ProductCategory";
-import AboutSection from "@/components/AboutSection";
 import WhySection from "@/components/WhySection";
 import ReviewsSection from "@/components/ReviewsSection";
 import MapSection from "@/components/MapSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 
 import iphoneImage from "@/assets/iphone-category.jpg";
 import macbookImage from "@/assets/macbook-category.jpg";
@@ -82,9 +82,6 @@ const Index = () => {
           details={watchDetails}
         />
       </section>
-      <section id="sobre">
-        <AboutSection />
-      </section>
       <section id="por-que">
         <WhySection />
       </section>
@@ -98,6 +95,7 @@ const Index = () => {
         <CTASection />
       </section>
       <Footer />
+      <FloatingWhatsAppButton />
     </div>
   );
 };

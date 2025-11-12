@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -58,13 +58,6 @@ const Footer = () => {
               >
                 <Instagram className="h-4 w-4 text-pink-500" />
                 @gphonebh
-              </a>
-              <a
-                href="#"
-                className="flex items-center gap-2 hover:text-blue-600 transition-colors"
-              >
-                <Facebook className="h-4 w-4 text-blue-600" />
-                Facebook
               </a>
             </div>
           </div>
