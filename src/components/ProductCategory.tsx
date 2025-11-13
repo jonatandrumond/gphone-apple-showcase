@@ -19,22 +19,20 @@ const ProductCategory = ({ title, description, image }: ProductCategoryProps) =>
           <div className="bg-card border-2 sm:border-4 border-gray-200 dark:border-gray-800 rounded-lg sm:rounded-xl shadow-lg overflow-hidden">
             {/* Imagem Centralizada */}
             <div className="flex justify-center p-3 sm:p-4 md:p-6">
-              <div className="relative w-full max-w-[280px] sm:max-w-sm aspect-square rounded-lg sm:rounded-xl overflow-hidden border-2 border-gray-300 dark:border-gray-700">
+              <div className="relative w-full max-w-[280px] sm:max-w-sm rounded-lg sm:rounded-xl overflow-hidden border-2 border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-900">
                 <img
                   src={image}
                   alt={title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-contain"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
             </div>
             
             {/* Conteúdo Abaixo da Imagem */}
             <div className="px-3 sm:px-4 md:px-6 pb-4 sm:pb-6 md:pb-8 text-center">
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 md:mb-4 animate-fade-in leading-tight">{title}</h3>
-              <p className="text-muted-foreground text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-5 md:mb-6 animate-fade-in leading-relaxed px-1" style={{ animationDelay: "0.1s" }}>{description}</p>
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-5 md:mb-6 animate-fade-in leading-tight">{title}</h3>
               
-              <div className="flex justify-center animate-scale-in px-2" style={{ animationDelay: "0.2s" }}>
+              <div className="flex justify-center animate-scale-in px-2" style={{ animationDelay: "0.1s" }}>
                 <Button
                   size="lg"
                   className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 lg:py-6 rounded-full shadow-xl hover:shadow-[0_0_30px_rgba(142,198,103,0.5)] transition-all duration-300 hover:scale-105 w-full sm:w-auto max-w-xs sm:max-w-none"

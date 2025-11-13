@@ -8,16 +8,17 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 
-import iphoneImage from "@/assets/iphone-category.jpg";
+// Importar imagem do iPhone 17 Pro Max
+import iphoneImage from "@/assets/depoimentos/initial__fo4stdzx5uy6_large.jpg";
 import macbookImage from "@/assets/macbook-category.jpg";
 import ipadImage from "@/assets/ipad-category.jpg";
 import watchImage from "@/assets/watch-category.jpg";
 
 const Index = () => {
   const iphoneDetails = [
-    "Modelos disponíveis: iPhone 11, 12, 13, 14, 15",
-    "Armazenamento: 64GB, 128GB, 256GB",
-    "Cores: preto, branco, azul, rosa",
+    "Modelos disponíveis: iPhone 11, 12, 13, 14, 15, 16, 17 Pro Max",
+    "Armazenamento: 64GB, 128GB, 256GB, 512GB, 1TB",
+    "Cores: preto, branco, azul, rosa, titânio natural",
     "Estado: novo / seminovo",
     "Garantia: 3 meses",
     "Nota fiscal disponível",
@@ -59,7 +60,7 @@ const Index = () => {
       <section id="produtos">
         <ProductCategory
           title="Celular iOS"
-          description="Modelos novos e seminovos com garantia e procedência"
+          description="Tecnologia de ponta, performance excepcional e inovação em cada detalhe"
           image={iphoneImage}
           details={iphoneDetails}
         />
