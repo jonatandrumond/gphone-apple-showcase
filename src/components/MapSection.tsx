@@ -32,7 +32,8 @@ const MapSection = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="rounded-full px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-5 lg:py-6 text-xs sm:text-sm md:text-base lg:text-lg hover:scale-105 transition-all duration-300 shadow-md hover:shadow-xl w-full sm:w-auto max-w-xs sm:max-w-none"
+                className="rounded-full px-4 sm:px-6 md:px-6 lg:px-8 py-4 sm:py-4 md:py-5 lg:py-6 text-sm sm:text-sm md:text-base lg:text-lg hover:scale-105 active:scale-95 transition-all duration-300 shadow-md hover:shadow-xl w-full sm:w-auto max-w-xs sm:max-w-none touch-manipulation"
+                style={{ minHeight: '48px' }}
                 asChild
               >
                 <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">

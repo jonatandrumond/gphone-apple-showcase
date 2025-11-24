@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const CTASection = () => {
   const whatsappNumber = "5531981068052";
-  const whatsappMessage = "Olá! Gostaria de saber mais sobre os produtos da GPhone.";
+  const whatsappMessage = "Olá! Gostaria de saber mais sobre assitencia tecnica Apple da GPhone";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
@@ -17,7 +17,8 @@ const CTASection = () => {
         <div className="flex justify-center mb-3 sm:mb-4 md:mb-6 animate-scale-in px-3 sm:px-4" style={{ animationDelay: "0.2s" }}>
           <Button
             size="lg"
-            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 rounded-full shadow-2xl hover:shadow-[0_0_40px_rgba(142,198,103,0.6)] transition-all duration-300 hover:scale-105 w-full sm:w-auto max-w-xs sm:max-w-none"
+            className="bg-whatsapp hover:bg-whatsapp/90 active:bg-whatsapp/80 text-whatsapp-foreground text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl px-6 sm:px-8 md:px-8 lg:px-10 xl:px-12 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 rounded-full shadow-2xl hover:shadow-[0_0_40px_rgba(142,198,103,0.6)] transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto max-w-xs sm:max-w-none touch-manipulation"
+            style={{ minHeight: '48px' }}
             asChild
           >
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">

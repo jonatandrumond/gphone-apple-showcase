@@ -3,11 +3,11 @@ import heroImage from "@/assets/hero-iphone.jpg";
 
 const Hero = () => {
   const whatsappNumber = "5531981068052";
-  const whatsappMessage = "Olá! Gostaria de saber mais sobre os produtos Apple da GPhone.";
+  const whatsappMessage = "Gostaria de saber mais sobre assistência tecnica para iphone.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-52 sm:pt-40 md:pt-44 lg:pt-52">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 sm:pt-36 md:pt-44 lg:pt-52">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
@@ -16,16 +16,17 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 container mx-auto px-3 sm:px-4 text-center text-white">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 text-balance animate-fade-in-up drop-shadow-lg leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-5 md:mb-6 text-balance animate-fade-in-up drop-shadow-lg leading-tight px-2">
           Problemas com seu iPhone?
         </h2>
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-5 sm:mb-6 md:mb-8 lg:mb-10 text-balance max-w-2xl mx-auto opacity-95 animate-fade-in-up drop-shadow-md px-1" style={{ animationDelay: "0.1s" }}>
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-6 sm:mb-7 md:mb-8 lg:mb-10 text-balance max-w-2xl mx-auto opacity-95 animate-fade-in-up drop-shadow-md px-3" style={{ animationDelay: "0.1s" }}>
           Deixa que a gente resolve!
         </p>
         <div className="flex justify-center animate-scale-in px-3 sm:px-4" style={{ animationDelay: "0.2s" }}>
           <Button
             size="lg"
-            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-xs sm:text-sm md:text-base lg:text-lg px-5 sm:px-6 md:px-8 lg:px-10 py-4 sm:py-5 md:py-6 lg:py-7 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(142,198,103,0.5)] transition-all duration-300 hover:scale-105 w-full sm:w-auto max-w-xs sm:max-w-none"
+            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-sm sm:text-base md:text-lg lg:text-lg px-6 sm:px-8 md:px-8 lg:px-10 py-4 sm:py-5 md:py-6 lg:py-7 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(142,198,103,0.5)] transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto max-w-xs sm:max-w-none touch-manipulation"
+            style={{ minHeight: '48px' }}
             asChild
           >
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">

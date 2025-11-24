@@ -1,6 +1,10 @@
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 
 const Footer = () => {
+  const whatsappNumber = "5531981068052";
+  const whatsappMessage = "Olá! Gostaria de saber mais sobre assitencia tecnica Apple da GPhone";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+  
   return (
     <footer className="bg-muted py-8 sm:py-10 md:py-12">
       <div className="container mx-auto px-3 sm:px-4">
@@ -9,7 +13,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Contato</h3>
             <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-muted-foreground">
               <a
-                href="https://wa.me/5531981068052"
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-whatsapp transition-colors"

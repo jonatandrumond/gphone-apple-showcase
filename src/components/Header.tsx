@@ -36,7 +36,7 @@ const Header = () => {
     const element = document.getElementById(targetId);
     if (element) {
       // Offset responsivo baseado no tamanho do header
-      const headerOffset = window.innerWidth < 640 ? 200 : 200;
+      const headerOffset = window.innerWidth < 640 ? 120 : 200;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -64,14 +64,15 @@ const Header = () => {
         isVisible ? "top-0" : "-top-full"
       )}
     >
-      <div className="container mx-auto px-3 sm:px-4 py-12 sm:py-7 md:py-8 lg:py-12">
+      <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-5 md:py-7 lg:py-12">
         <div className="flex items-center justify-center relative">
           {/* Logo */}
-          <div className="absolute left-2 sm:left-4 lg:left-8">
+          <div className="absolute left-0 sm:left-2 lg:left-8">
             <img 
               src={logo} 
               alt="GPhone Logo" 
-              className="h-20 sm:h-20 md:h-24 lg:h-32 w-auto object-contain"
+              className="h-12 sm:h-16 md:h-20 lg:h-32 w-auto object-contain"
+              loading="eager"
             />
           </div>
 
@@ -91,11 +92,12 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden absolute right-4">
+          <div className="lg:hidden absolute right-0 sm:right-2">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors p-2 touch-manipulation"
               aria-label="Menu"
+              style={{ minWidth: '44px', minHeight: '44px' }}
             >
               {isMobileMenuOpen ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

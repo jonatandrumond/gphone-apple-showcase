@@ -1,6 +1,6 @@
 const FloatingWhatsAppButton = () => {
   const whatsappNumber = "5531981068052";
-  const whatsappMessage = "Olá! Gostaria de saber mais sobre os produtos Apple da GPhone.";
+  const whatsappMessage = "Olá! Gostaria de saber mais sobre assitencia tecnica Apple da GPhone.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
@@ -8,7 +8,8 @@ const FloatingWhatsAppButton = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-whatsapp hover:bg-whatsapp/90 text-white rounded-full p-3 sm:p-4 md:p-5 shadow-2xl hover:shadow-[0_0_30px_rgba(142,198,103,0.5)] transition-all duration-300 hover:scale-110 animate-bounce-subtle group"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-whatsapp hover:bg-whatsapp/90 active:bg-whatsapp/80 text-white rounded-full p-4 sm:p-4 md:p-5 shadow-2xl hover:shadow-[0_0_30px_rgba(142,198,103,0.5)] transition-all duration-300 hover:scale-110 active:scale-95 animate-bounce-subtle group touch-manipulation"
+      style={{ minWidth: '56px', minHeight: '56px' }}
       aria-label="Falar no WhatsApp"
     >
       <svg 

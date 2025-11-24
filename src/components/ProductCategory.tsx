@@ -5,12 +5,14 @@ interface ProductCategoryProps {
   description: string;
   image: string;
   details: string[];
+  whatsappMessage?: string;
 }
 
-const ProductCategory = ({ title, description, image }: ProductCategoryProps) => {
+const ProductCategory = ({ title, description, image, whatsappMessage }: ProductCategoryProps) => {
   const whatsappNumber = "5531981068052";
-  const whatsappMessage = `Olá! Gostaria de saber mais sobre ${title}.`;
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+  const defaultMessage = `Olá! Gostaria de saber mais sobre ${title}.`;
+  const message = whatsappMessage || defaultMessage;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <section className="w-full bg-background">
@@ -24,6 +26,7 @@ const ProductCategory = ({ title, description, image }: ProductCategoryProps) =>
                   src={image}
                   alt={title}
                   className="w-full h-auto object-contain"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -35,7 +38,8 @@ const ProductCategory = ({ title, description, image }: ProductCategoryProps) =>
               <div className="flex justify-center animate-scale-in px-2" style={{ animationDelay: "0.1s" }}>
                 <Button
                   size="lg"
-                  className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 lg:py-6 rounded-full shadow-xl hover:shadow-[0_0_30px_rgba(142,198,103,0.5)] transition-all duration-300 hover:scale-105 w-full sm:w-auto max-w-xs sm:max-w-none"
+                  className="bg-whatsapp hover:bg-whatsapp/90 active:bg-whatsapp/80 text-whatsapp-foreground text-sm sm:text-sm md:text-base px-5 sm:px-6 md:px-8 py-4 sm:py-4 md:py-5 lg:py-6 rounded-full shadow-xl hover:shadow-[0_0_30px_rgba(142,198,103,0.5)] transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto max-w-xs sm:max-w-none touch-manipulation"
+                  style={{ minHeight: '48px' }}
                   asChild
                 >
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">

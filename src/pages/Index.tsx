@@ -63,24 +63,28 @@ const Index = () => {
           description="Tecnologia de ponta, performance excepcional e inovação em cada detalhe"
           image={iphoneImage}
           details={iphoneDetails}
+          whatsappMessage="Gostaria de saber mais sobre assistência tecnica para iphone."
         />
         <ProductCategory
           title="MacBook"
           description="Performance, elegância e potência para o seu dia a dia"
           image={macbookImage}
           details={macbookDetails}
+          whatsappMessage="Gostaria de saber mais sobre assistência tecnica para MacBook"
         />
         <ProductCategory
           title="iPad"
           description="Produtividade e criatividade em qualquer lugar"
           image={ipadImage}
           details={ipadDetails}
+          whatsappMessage="Gostaria de saber mais sobre assistência tecnica para iPad"
         />
         <ProductCategory
           title="Apple Watch"
           description="Estilo e tecnologia no seu pulso"
           image={watchImage}
           details={watchDetails}
+          whatsappMessage="Gostaria de saber mais sobre assistência tecnica para Apple Watch"
         />
       </section>
       <section id="por-que">
